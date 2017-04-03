@@ -1,0 +1,36 @@
+@import "reset";
+html, body {
+	margin: 0;
+	height: 100%;
+}
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
+	font-size: 1.25rem;
+	color: #d2d3df;
+	line-height: 2rem;
+	background-color: #333;
+	height: 100%;
+	@media screen and (max-width: 650px) {
+		width: 100%;
+	}
+}
+
+input[type='checkbox'] {
+	display: none;
+}
+
+h1 {
+	font-size: 1.7rem;
+	font-weight: bolder;
+	text-align: center;
+	margin: 1rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 1rem;
+}

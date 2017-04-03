@@ -1,0 +1,52 @@
+#img-container {
+	width: 73%;
+	padding: 1%;
+	display: block;
+	overflow: auto;
+	float: right;
+	background-color: rgba(68,102,136, .2);
+	margin-top: 1rem;
+	column-count: 3;
+	column-gap: .5rem;
+	@media screen and (max-width: 650px) {
+		column-count: 2;
+		width: 96%;
+		float: none;
+		padding: 2%;
+		@media screen and (max-width: 400px) {
+			column-count: 1;
+			height: auto;
+		}
+	}
+	.img-wrap-label {
+		width: 100%;
+		display: inline-block;
+		break-inside: avoid;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+			opacity: .7;
+			cursor: pointer !important;
+			transition: all 1s;
+			&:hover {
+				opacity: 1;
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+#info {
+	width: 25%;
+	float: left;
+	p {
+		padding: .5rem;
+	}
+	@media screen and (max-width: 650px) {
+		float: none;
+		width: 80%;
+		margin: auto;
+	}
+}

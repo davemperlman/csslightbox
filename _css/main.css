@@ -1,0 +1,495 @@
+@keyframes lightbox-hide {
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  margin: 0;
+  height: 100%; }
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Roboto Condensed', 'Open Sans', sans-serif;
+  font-size: 1.25rem;
+  color: #d2d3df;
+  line-height: 2rem;
+  background-color: #333;
+  height: 100%; }
+  @media screen and (max-width: 650px) {
+    body {
+      width: 100%; } }
+
+input[type='checkbox'] {
+  display: none; }
+
+h1 {
+  font-size: 1.7rem;
+  font-weight: bolder;
+  text-align: center;
+  margin: 1rem; }
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem; }
+
+#lightbox-container-0 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-0 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-0 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-0 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-0 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-0:checked ~ #lightbox-container-0 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-1 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-1 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-1 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-1 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-1 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-1:checked ~ #lightbox-container-1 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-2 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-2 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-2 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-2 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-2 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-2:checked ~ #lightbox-container-2 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-3 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-3 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-3 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-3 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-3 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-3:checked ~ #lightbox-container-3 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-4 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-4 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-4 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-4 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-4 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-4:checked ~ #lightbox-container-4 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-5 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-5 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-5 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-5 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-5 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-5:checked ~ #lightbox-container-5 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-6 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-6 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-6 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-6 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-6 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-6:checked ~ #lightbox-container-6 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-7 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-7 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-7 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-7 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-7 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-7:checked ~ #lightbox-container-7 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-8 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-8 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-8 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-8 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-8 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-8:checked ~ #lightbox-container-8 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-9 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-9 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-9 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-9 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-9 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-9:checked ~ #lightbox-container-9 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#lightbox-container-10 {
+  position: absolute;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 10; }
+  #lightbox-container-10 #lightbox {
+    margin: auto;
+    max-width: 600px;
+    display: block;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 650px) {
+      #lightbox-container-10 #lightbox {
+        width: 100%;
+        overflow: hidden; }
+        #lightbox-container-10 #lightbox img {
+          box-sizing: border-box; } }
+    #lightbox-container-10 #lightbox img {
+      max-width: 100%;
+      border: 1rem solid #fff; }
+
+#lightbox-activate-10:checked ~ #lightbox-container-10 {
+  transition: opacity .5s;
+  visibility: visible;
+  opacity: 1; }
+
+#img-container {
+  width: 73%;
+  padding: 1%;
+  display: block;
+  overflow: auto;
+  float: right;
+  background-color: rgba(68, 102, 136, 0.2);
+  margin-top: 1rem;
+  column-count: 3;
+  column-gap: .5rem; }
+  @media screen and (max-width: 650px) {
+    #img-container {
+      column-count: 2;
+      width: 96%;
+      float: none;
+      padding: 2%; } }
+  @media screen and (max-width: 650px) and (max-width: 400px) {
+    #img-container {
+      column-count: 1;
+      height: auto; } }
+
+  #img-container .img-wrap-label {
+    width: 100%;
+    display: inline-block;
+    break-inside: avoid;
+    overflow: hidden; }
+    #img-container .img-wrap-label img {
+      width: 100%;
+      height: auto;
+      display: block;
+      opacity: .7;
+      cursor: pointer !important;
+      transition: all 1s; }
+      #img-container .img-wrap-label img:hover {
+        opacity: 1;
+        transform: scale(1.2); }
+
+#info {
+  width: 25%;
+  float: left; }
+  #info p {
+    padding: .5rem; }
+  @media screen and (max-width: 650px) {
+    #info {
+      float: none;
+      width: 80%;
+      margin: auto; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,39 @@
+@for $i from 0 through 10 {
+	#lightbox-container-#{$i} {
+		position: absolute;
+		visibility: hidden;
+		background-color: rgba(0,0,0, .9);
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		//transition: opacity .5s, visibility 0s .5s; Can't figure this out :(
+		z-index: 10;
+		#lightbox {
+			margin: auto;
+			max-width: 600px;
+			display: block;
+			position: fixed; 
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@media screen and (max-width: 650px) {
+				width: 100%;
+				overflow: hidden;
+				img {
+					box-sizing: border-box;
+				}
+			}
+			img {
+				max-width: 100%;
+				border: 1rem solid #fff;
+			}
+		}
+	}
+	#lightbox-activate-#{$i}:checked ~ #lightbox-container-#{$i} {
+		transition: opacity .5s;
+		visibility: visible;
+		opacity: 1;
+	}
+}
